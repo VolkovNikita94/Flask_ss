@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Просмотр результата</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <!-- Добавим сюда iFrame, отображающий визуализацию графа -->
+    <div id="refresh">
+        <button onclick="document.getElementById('frameId').src = document.getElementById('frameId').src;">Обновить</button>
+    </div>
+    <iframe id = "frameId" src="{{ source }}" width="1218" height="820" scrolling="no" frameborder="1"></iframe>
+    <div id="submit">
+        <a href="{{ url_for('main.upload_task') }}">Загрузить другое задание</a>
+    </div>
+{% endblock %}
