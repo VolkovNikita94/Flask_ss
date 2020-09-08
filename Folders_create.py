@@ -12,6 +12,7 @@ for i in range(0, new_user_count):
 	if not os.path.exists('userdata/' + usr_name):
 		os.makedirs('userdata/' + usr_name)
 	copy_tree('userdata/ucmc2020ssRoot', 'userdata/' + usr_name)
+	os.system('chmod 777 -R ucmc2020*')
 
 
 
