@@ -25,7 +25,7 @@ function handleLoadedpage_cfg(page_cfgData) {
 
 function loadpage_cfg() {
 	var request = new XMLHttpRequest();
-	request.open("GET", "Json_models/Page_cfg.json", true);
+	request.open("GET", "Json_models/Page_cfg.json", false);
 	request.setRequestHeader('cache-control', 'no-cache');
 	
 	try {
@@ -43,8 +43,8 @@ function loadpage_cfg() {
 
 function loadpage_about() {
 	var request = new XMLHttpRequest();
-	request.open("GET", "Json_models/Page_about.json", true);
-        request.setRequestHeader('cache-control', 'no-cache');
+	request.open("GET", "Json_models/Page_about.json", false);
+	request.setRequestHeader('cache-control', 'no-cache');
 	
 	try {
 		request.send();
